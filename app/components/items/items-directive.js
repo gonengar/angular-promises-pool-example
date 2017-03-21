@@ -2,6 +2,7 @@ angular.module('myApp').directive('items', function (ItemsCollection, HighlightW
     return {
         restrict: 'E',
         templateUrl: 'components/items/items.html',
+        scope:true,
         link: function (scope) {
             scope.collection = ItemsCollection.getCollection();
             scope.isHighlighted = (name) => {
