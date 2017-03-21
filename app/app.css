@@ -1,25 +1,17 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.highlightWord {
+    border-style: solid;
 }
 
-.menu:before {
-  content: "[";
+span.highlightWordSelector:hover {
+    cursor: pointer;
 }
 
-.menu:after {
-  content: "]";
+tr {
+    display: flex;
 }
 
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+td {
+    text-align: center;
 }

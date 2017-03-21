@@ -1,0 +1,14 @@
+<table ng-show="collection.length > 0">
+    <tr>
+        <td style="flex:4">name</td>
+        <td style="flex:1">price</td>
+        <td style="flex:1">likes</td>
+        <td style="flex:1">image</td>
+    </tr>
+    <tr ng-repeat="sywItem in collection" ng-class="{highlightWord:isHighlighted(sywItem.name)}">
+        <td style="flex:4">{{sywItem.name}}</td>
+        <td style="flex:1">{{sywItem.price}}</td>
+        <td style="flex:1">{{sywItem.likes}}</td>
+        <td style="flex:1"><img ng-src="{{sywItem.imageUrl}}" height="42" width="42"></td>
+    </tr>
+</table>

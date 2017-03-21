@@ -1,12 +1,11 @@
-angular.module('myApp').directive('mainView', function(DataRetrieverService, RequestConstant){
+angular.module('myApp').directive('mainView', function(CollectionsFilterService){
     return {
         restrict: 'E',
         templateUrl: 'components/main-view/main-view.html',
-        link: function(scope, element, attributes){
-            DataRetrieverService.getData(RequestConstant.numOfTimes).then((data)=>{
-                scope.data = data;
-                scope.$digest();
-            })
+        link: function(scope){
+            scope.search = function(){
+                CollectionsFilterService.filter(scope.searchString);
+            }
         }
     }
 });
